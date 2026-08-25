@@ -1,0 +1,13 @@
+{
+  "name": "WITH BOHUN",
+  "short_name": "WITH BOHUN",
+  "description": "(사)보훈상생위원회 — 보훈은 일상으로, 상생은 미래로",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#1656F5",
+  "icons": [
+    { "src": "images/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
