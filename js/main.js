@@ -90,38 +90,6 @@
     scoreIO.observe(scoreBlock);
   }
 
-  /* ---------- Map filter chips (visual demo only) ---------- */
-  var mapFilters = document.getElementById("mapFilters");
-  if (mapFilters) {
-    mapFilters.querySelectorAll(".chip").forEach(function (chip) {
-      chip.addEventListener("click", function () {
-        mapFilters.querySelectorAll(".chip").forEach(function (c) { c.classList.remove("is-active"); });
-        chip.classList.add("is-active");
-      });
-    });
-  }
-
-  /* ---------- Map pin <-> store card sync (visual demo only) ---------- */
-  var mapCanvas = document.getElementById("mapCanvas");
-  var storeCards = document.getElementById("storeCards");
-  if (mapCanvas && storeCards) {
-    var pins = mapCanvas.querySelectorAll(".map-pin");
-    var cards = storeCards.querySelectorAll(".store-card");
-
-    function activateStore(id) {
-      pins.forEach(function (p) { p.classList.toggle("is-active", p.dataset.store === id); });
-      cards.forEach(function (c) { c.classList.toggle("is-active", c.dataset.store === id); });
-    }
-
-    pins.forEach(function (pin) {
-      pin.addEventListener("click", function () { activateStore(pin.dataset.store); });
-      pin.addEventListener("mouseenter", function () { activateStore(pin.dataset.store); });
-    });
-    cards.forEach(function (card) {
-      card.addEventListener("mouseenter", function () { activateStore(card.dataset.store); });
-    });
-  }
-
   /* ---------- Mobile bottom-nav active state ---------- */
   var bottomLinks = document.querySelectorAll(".bottom-nav a");
   var sectionMap = [

@@ -162,40 +162,26 @@
       <div class="section-head reveal">
         <span class="eyebrow">STORE MAP</span>
         <h2 class="section-title">내 주변 <strong>보훈상생매장</strong></h2>
-        <p class="section-lede">향후 WITH BOHUN의 핵심 기능으로 확장될 매장 검색 지도입니다. (디자인 목업 — 실제 서비스에서는 지도 API와 연동됩니다)</p>
+        <p class="section-lede">전국 보훈상생매장을 실시간으로 검색할 수 있는 모두보훈 가맹점 서비스와 연결됩니다.</p>
       </div>
 
       <div class="map-layout reveal">
         <div class="map-panel">
-          <div class="map-search">
-            <span>🔍</span>
-            <input type="text" placeholder="음식점, 미용실, 약국 검색" aria-label="매장 검색">
+          <div class="map-embed-bar">
+            <span class="map-embed-label">📍 내 주변 보훈상생매장 찾기</span>
+            <a class="map-embed-open" href="https://modoobohun.com/user/franchise" target="_blank" rel="noopener noreferrer">새 창에서 열기 ↗</a>
           </div>
-          <div class="map-filters" id="mapFilters">
-            <button class="chip is-active" data-filter="all">전체</button>
-            <button class="chip" data-filter="food">외식</button>
-            <button class="chip" data-filter="cafe">카페</button>
-            <button class="chip" data-filter="mart">편의점</button>
-            <button class="chip" data-filter="beauty">미용</button>
-            <button class="chip" data-filter="pharm">약국</button>
-            <button class="chip" data-filter="fashion">의류</button>
-            <button class="chip" data-filter="sports">스포츠</button>
-            <button class="chip" data-filter="travel">여행</button>
+          <div class="map-embed-wrap">
+            <iframe
+              src="https://modoobohun.com/user/franchise"
+              title="모두보훈 가맹점 찾기"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              tabindex="-1"
+              aria-hidden="true"></iframe>
+            <a class="map-embed-overlay" href="https://modoobohun.com/user/franchise" target="_blank" rel="noopener noreferrer" aria-label="모두보훈 가맹점 찾기 — 새 창에서 열기"></a>
           </div>
-          <div class="map-canvas" id="mapCanvas">
-            <svg viewBox="0 0 400 300" preserveAspectRatio="none">
-              <path d="M0,60 C100,20 180,110 260,70 C320,45 360,90 400,60" stroke="#43895D" stroke-width="2" fill="none"/>
-              <path d="M0,220 C90,260 220,190 300,230 C340,250 370,210 400,230" stroke="#43895D" stroke-width="2" fill="none"/>
-              <path d="M140,0 C160,90 120,190 150,300" stroke="#B8863A" stroke-width="1.5" fill="none" stroke-dasharray="4 6"/>
-            </svg>
-            <div class="map-pin p1" data-store="1"><span>🍽</span></div>
-            <div class="map-pin p2" data-store="2"><span>💇</span></div>
-            <div class="map-pin p3" data-store="3"><span>🏪</span></div>
-            <div class="map-pin p4" data-store="4"><span>💊</span></div>
-            <div class="map-pin p5" data-store="5"><span>👕</span></div>
-            <div class="map-badge">📍 내 주변 보훈매장 12곳</div>
-          </div>
-          <p class="map-note">* 매장 위치·수치는 예시이며, 실제 서비스 오픈 시 인증 매장 데이터와 지도 API로 대체됩니다.</p>
+          <p class="map-note">* 매장 검색은 제휴 서비스 <strong>modoobohun.com</strong>에서 제공됩니다. 클릭하시면 새 창에서 열립니다.</p>
         </div>
 
         <div class="store-cards" id="storeCards">
